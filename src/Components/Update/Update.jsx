@@ -10,7 +10,7 @@ export default function Update() {
   function handelClick(e) {
     e.preventDefault();
     axios
-      .put(`https://6605d76cd92166b2e3c2e211.mockapi.io/CrudApp/${id}`, data)
+      .put(`https://65ec464d0ddee626c9afdf5b.mockapi.io/Curd/${id}`, data)
       .then((e) => {
         alert("Udpate Sucessfully");
         navGate("/");
@@ -18,7 +18,7 @@ export default function Update() {
   }
   useEffect(() => {
     axios
-      .get(`https://6605d76cd92166b2e3c2e211.mockapi.io/CrudApp/${id}`)
+      .get(`https://65ec464d0ddee626c9afdf5b.mockapi.io/Curd/${id}`)
       .then((e) => {
         setdata(e.data);
       })
@@ -41,8 +41,7 @@ export default function Update() {
                     placeholder="Enter Product Name"
                     name="name"
                     value={data.name}
-                    onChange={(e) => 
-                    setdata({...data , name: e.target.value})}
+                    onChange={(e) => setdata({ ...data, name: e.target.value })}
                   />
                 </div>
                 <div className="price my-2">
@@ -54,7 +53,9 @@ export default function Update() {
                     placeholder="Enter Product price"
                     name="price"
                     value={data.price}
-                    onChange={(e) => setdata({ ...data, price: e.target.value })}
+                    onChange={(e) =>
+                      setdata({ ...data, price: e.target.value })
+                    }
                   />
                 </div>
                 <div className="category my-2">
@@ -80,7 +81,9 @@ export default function Update() {
                     placeholder="Count"
                     name="count"
                     value={data.count}
-                    onChange={(e) => setdata({ ...data, count: e.target.value })}
+                    onChange={(e) =>
+                      setdata({ ...data, count: e.target.value })
+                    }
                   />
                 </div>
                 <div className="descrption my-2">
@@ -98,7 +101,7 @@ export default function Update() {
                   />
                 </div>
                 <button type="submit" className="btn btn-info mt-3">
-                    Update
+                  Update
                 </button>
               </form>
             </div>

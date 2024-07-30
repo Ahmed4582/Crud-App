@@ -27,7 +27,7 @@ export default function Main() {
   //   Function To Post Data
   async function postData(values) {
     await axios.post(
-      "https://6605d76cd92166b2e3c2e211.mockapi.io/CrudApp",
+      "https://65ec464d0ddee626c9afdf5b.mockapi.io/Curd",
       values
     );
     getData();
@@ -35,7 +35,7 @@ export default function Main() {
   //   Function to getData
   async function getData() {
     let { data } = await axios.get(
-      "https://6605d76cd92166b2e3c2e211.mockapi.io/CrudApp"
+      "https://65ec464d0ddee626c9afdf5b.mockapi.io/Curd"
     );
     setdata(data);
     console.log(data);
@@ -43,7 +43,7 @@ export default function Main() {
   // Function To DeletData
   async function deleted(id) {
     await axios.delete(
-      `https://6605d76cd92166b2e3c2e211.mockapi.io/CrudApp/${id}`
+      `https://65ec464d0ddee626c9afdf5b.mockapi.io/Curd/${id}`
     );
     getData();
   }
@@ -92,7 +92,7 @@ export default function Main() {
                     className="form-control"
                     id="category"
                     placeholder="Category"
-                    name="category"
+                    name="catgory"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.catgory}
